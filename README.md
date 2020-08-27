@@ -1,8 +1,9 @@
 # Edabit Solution Repository
-This repository contains solutions to various Edabit programming challenges that I have solved, in multiple languages.
-You can visit the website yourself here, if you'd like: https://edabit.com
+This is a repository of my solutions to various Edabit programming challenges from multiple languages, from stupidly simple to challenging. 
 
-The repository structure is as follows.
+You can visit the website and solve challenges for yourself, if you'd like: https://edabit.com
+
+### Repository Structure
 
 ``` 
 challenges
@@ -14,4 +15,3 @@ challenges
         ├───very_easy
         └───very_hard
 ```
-
