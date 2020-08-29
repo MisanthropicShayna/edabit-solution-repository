@@ -11,6 +11,14 @@ If this value is greater than the last index value of the dance array, it should
 
 Valid input will always be a string of four digits. Output will be an array of strings.
 If the input is not four valid integers, return the string, "Invalid input."
+
+ELISP Version
+
+(defun dance-for-cash (pin)
+  (let ((moves '("Shimmy" "Shake" "Pirouette" "Slide" "Box Step" "Headspin" "Dosado" "Pop" "Lock" "Arabesque")))
+    (if (not (and (eq (length pin) 4) (cl-every #'cl-digit-char-p pin))) "Invalid input."
+      (cl-loop for index from 0 to (- (length pin) 1) collect
+               (elt moves (mod (+ (cl-digit-char-p (aref pin index)) index) (length moves)))))))
 =end
 
 $moves = ['Shimmy', 'Shake', 'Pirouette', 'Slide', 'Box Step', 'Headspin', 'Dosado', 'Pop', 'Lock', 'Arabesque']
